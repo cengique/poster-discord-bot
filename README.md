@@ -22,8 +22,23 @@ Uses [EnMap](https://enmap.evie.dev/) as local database.
 
 **License:** [ISC](https://opensource.org/licenses/ISC)
 
-**Warning:** Hard-coded owners, roles, and categories. Cannot be used
-in arbitrary servers without modification.
+## Installation
+
+- Create an `.env` file to hold the bot token as explained in 
+  [here](https://discordjs.guide/preparations/setting-up-a-bot-application.html#setting-up-a-bot-application).
+- Create a `config.json` file with the following information for your server:
+  ```json
+  {
+  "owners": ["xxx", "yyy"],    // IDs of users who can use the ??eval debugging command
+  "postercat": ["xxx", "yyy"], // IDs of categories that will hold the poster channels created
+  "role_everyone": "xxx",      // ID of role 
+  "role_admin": "xxx"          // ID of role
+  }
+  ```
+  _Hint_: To get the IDs, enable _Developer Mode_ under settings and then find in right-click menu.
+- Run `npm install` to install dependencies
+- Run `node index.js` to run the bot
+- Add your bot to your servers by following [these instructions](https://discordjs.guide/preparations/adding-your-bot-to-servers.html)
 
 ## Usage:
 
@@ -32,6 +47,4 @@ in arbitrary servers without modification.
 - `!see pYYY` to make the poster channels visible to user (e.g. `!see
   p12`). User will be added to role.
 
-See under the [Github Issues](issues/) for outstanding problems. Requires an
-`.env` file to hold the bot token as explained in 
-[here](https://discordjs.guide/preparations/setting-up-a-bot-application.html#setting-up-a-bot-application).
+See under the [Github Issues](issues/) for outstanding problems. 

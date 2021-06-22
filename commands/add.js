@@ -2,10 +2,14 @@
 const { MessageEmbed } = require('discord.js');
 module.exports = {
   async execute(bot, message, args, c) {
-    if(!args.length)
-      return message.channel.send(new MessageEmbed().setColor(c).setTitle('Correct Usage').setDescription('`!add <PosterName>`').setFooter('Exclude <> when using the command'));
-    if(await bot.rooms.has(args[0]))
-      return  message.channel.send(new MessageEmbed().setColor(c).setTitle('Already Exists').setDescription('The poster name already exists! '));
+    if(!args.length) {
+      await message.channel.send(new MessageEmbed().setColor(c).setTitle('Correct Usage').setDescription('`!add <PosterName>`').setFooter('Exclude <> when using the command'));
+      return;
+    }
+    if(bot.rooms.has(args[0])) {
+      await message.channel.send(new MessageEmbed().setColor(c).setTitle('Already Exists').setDescription('The poster name already exists! '));
+      return;
+    }
     let cc;
     
     for(const data of bot.config.postercat){
