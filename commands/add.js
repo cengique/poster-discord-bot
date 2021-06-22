@@ -68,7 +68,9 @@ module.exports = {
 						id: '847489076469825549', // Server admin
 						allow: [
 							'SEND_MESSAGES',
-							'VIEW_CHANNEL',
+						        'VIEW_CHANNEL',
+                                                        'ADD_REACTIONS',
+                                                        'STREAM',
 							'ATTACH_FILES',
 							'READ_MESSAGE_HISTORY'
 						]
@@ -76,7 +78,9 @@ module.exports = {
 						id: role.id,
 						allow: [
 							'SEND_MESSAGES',
-							'VIEW_CHANNEL',
+						        'VIEW_CHANNEL',
+                                                        'ADD_REACTIONS',
+                                                        'STREAM',
 							'ATTACH_FILES',
 							'READ_MESSAGE_HISTORY'
 						]

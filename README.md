@@ -20,11 +20,16 @@ Uses [EnMap](https://enmap.evie.dev/) as local database.
 
 **Inspired by:** [Room Bot](https://milotrince.github.io/discord-roombot/)
 
-**Warning:** Hard-coded owners, roles, and categories. Cannot be used in arbitrary servers without modification.
+**Warning:** Hard-coded owners, roles, and categories. Cannot be used
+in arbitrary servers without modification.
 
 ## Usage:
 
-- `!add pYYY` to add a new text+voice channel pair to posters category (e.g. `!add p12`). Channels will initially be hidden.
-- `!see pYYY` to make the poster channels visible to user (e.g. `!see p12`). User will be added to role.
+- `!add pYYY` to add a new text+voice channel pair to posters category
+  (e.g. `!add p12`). Channels will initially be hidden.
+- `!see pYYY` to make the poster channels visible to user (e.g. `!see
+  p12`). User will be added to role.
 
-See under the Github Issues for outstanding problems.
+See under the [Github Issues](issues/) for outstanding problems. Requires an
+`.env` file to hold the bot token as explained in 
+[here](https://discordjs.guide/preparations/setting-up-a-bot-application.html#setting-up-a-bot-application).
