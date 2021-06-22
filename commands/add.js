@@ -96,7 +96,8 @@ module.exports = {
       });
 
     await bot.rooms.set(args[0].toLowerCase(), {text: text, voice: voice, role: role.id}); // add category here?
-    return message.channel.send(new MessageEmbed().setColor(c).setTitle('Done!').setDescription('New role, text and voice channels are created for the mentioned PosterName'));
+    await message.channel.send(new MessageEmbed().setColor(c).setTitle('Done!').setDescription('New role, text and voice channels are created for the mentioned PosterName'));
+    return;
 
   }
 };
