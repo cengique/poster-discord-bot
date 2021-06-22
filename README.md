@@ -20,6 +20,8 @@ Uses [EnMap](https://enmap.evie.dev/) as local database.
 
 **Inspired by:** [Room Bot](https://milotrince.github.io/discord-roombot/)
 
+**License:** [ISC](https://opensource.org/licenses/ISC)
+
 **Warning:** Hard-coded owners, roles, and categories. Cannot be used
 in arbitrary servers without modification.
 

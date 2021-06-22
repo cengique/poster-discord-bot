@@ -37,6 +37,7 @@ module.exports = {
 						allow: [
 							'SEND_MESSAGES',
 							'VIEW_CHANNEL',
+                                                        'ADD_REACTIONS',
 							'ATTACH_FILES',
 							'READ_MESSAGE_HISTORY'
 						]
@@ -45,6 +46,7 @@ module.exports = {
 						allow: [
 							'SEND_MESSAGES',
 							'VIEW_CHANNEL',
+                                                        'ADD_REACTIONS',
 							'ATTACH_FILES',
 							'READ_MESSAGE_HISTORY'
 						]
@@ -62,27 +64,23 @@ module.exports = {
 				permissionOverwrites: [
 					{
 						id: '847150537774071848',  //Everyone Role
-						deny: ['VIEW_CHANNEL', 'SEND_MESSAGES']
+					        deny: ['VIEW_CHANNEL', 'SPEAK', 'CONNECT']
 					},
 					{
 						id: '847489076469825549', // Server admin
 						allow: [
-							'SEND_MESSAGES',
 						        'VIEW_CHANNEL',
-                                                        'ADD_REACTIONS',
-                                                        'STREAM',
-							'ATTACH_FILES',
-							'READ_MESSAGE_HISTORY'
+                                                        'SPEAK',
+                                                        'CONNECT',
+                                                        'STREAM'
 						]
 					}, {
 						id: role.id,
 						allow: [
-							'SEND_MESSAGES',
 						        'VIEW_CHANNEL',
-                                                        'ADD_REACTIONS',
-                                                        'STREAM',
-							'ATTACH_FILES',
-							'READ_MESSAGE_HISTORY'
+                                                        'SPEAK',
+                                                        'CONNECT',
+                                                        'STREAM'
 						]
 					}
 				]

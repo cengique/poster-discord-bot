@@ -15,8 +15,8 @@ const bot =  new Discord.Client({
 bot.commands = new Discord.Collection();
 
 //Defining Basic Constants
-bot.owners = ['581442925611712513', '155707890328535040'];
 bot.package = require('./package');
+bot.config = require('./config');
 
 //Connecting to DB
 bot.rooms = new Enmap({
@@ -58,7 +58,7 @@ readdir('./commands/', (err, files) => {
 //Handling Eval Command
 bot.on('message', async message => {
 	if(message.content.startsWith('??eval')){
-		if(!bot.owners.includes(message.author.id)) return;
+		if(!bot.config.owners.includes(message.author.id)) return;
 		try {
 			const code = message.content.slice(7);
 			let evaled = eval(code);
