@@ -33,7 +33,7 @@ module.exports = {
 						deny: ['VIEW_CHANNEL', 'SEND_MESSAGES']
 					},
 					{
-						id: '847489076469825549',
+						id: '847489076469825549', // Server admin
 						allow: [
 							'SEND_MESSAGES',
 							'VIEW_CHANNEL',
@@ -65,7 +65,7 @@ module.exports = {
 						deny: ['VIEW_CHANNEL', 'SEND_MESSAGES']
 					},
 					{
-						id: '847489076469825549',
+						id: '847489076469825549', // Server admin
 						allow: [
 							'SEND_MESSAGES',
 							'VIEW_CHANNEL',
@@ -87,7 +87,7 @@ module.exports = {
 				voice = channel.id;
 			});
 
-		await bot.rooms.set(args[0].toLowerCase(), {text: text, voice: voice, role: role.id});
+	        await bot.rooms.set(args[0].toLowerCase(), {text: text, voice: voice, role: role.id}); // add category here?
 		return message.channel.send(new MessageEmbed().setColor(c).setTitle('Done!').setDescription('New role, text and voice channels are created for the mentioned PosterName'));
 
 	}
