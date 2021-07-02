@@ -14,9 +14,7 @@ channels, it will select another category from a given list.
 
 Uses [EnMap](https://enmap.evie.dev/) as local database.
 
-**Author:** @ImmortalEvil
-
-**Maintained by:** @cengique
+**Authors:** [@ImmortalEvil](https://github.com/ImmortalEvil), [@cengique](https://github.com/cengique)
 
 **Inspired by:** [Room Bot](https://milotrince.github.io/discord-roombot/)
 
@@ -29,12 +27,18 @@ Uses [EnMap](https://enmap.evie.dev/) as local database.
 - Create a `config.json` file with the following information for your server:
   ```json
   {
-  "owners": ["xxx", "yyy"],    // IDs of users who can use the ??eval debugging command
-  "postercat": ["xxx", "yyy"], // IDs of categories that will hold the poster channels created
-  "role_everyone": "xxx",      // ID of role 
-  "role_admin": "xxx"          // ID of role
+  "owners": ["xxx", "yyy"],
+  "postercat": ["xxx", "yyy"],
+  "role_everyone": "xxx",
+  "role_admin": "xxx"
   }
   ```
+  where
+  - `owners` are IDs of users who can use the `??eval` debugging command
+  - `postercat` are IDs of server categories that will hold the poster channels created
+  - `role_everyone` is the ID of the everyone role on the server
+  - `role_admin` is the ID of server admin role
+  
   _Hint_: To get the IDs, enable _Developer Mode_ under settings and then find in right-click menu.
 - Run `npm install` to install dependencies
 - Run `node index.js` to run the bot
